@@ -6,19 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery Page</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="gallery.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
    <header>
     <img class="logo" src="images/portfolioDesignLogo.svg" alt="Logo">
-    <nav>
+    <nav class="navigation">
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="gallery.html">Gallery</a>
     </nav>
    </header> 
    <main>
+        <h1>Gallery / Collection</h1>
+        <hr width="50%">
+        <nav class="galleryNav">
+            <a href="#personal">Personal</a>
+            <a href="#travel">Travel</a>
+            <a href="#artsy">Artsy</a>
+        </nav>
+        <section>
+            <h2 style="text-align: center;">Title</h2>
+            <div>
+                <div id="previous-area"><button id="previous-button">&#8249;</button> </div>
+                <img src="" alt="Any Picture">
 
+                <div id="next-area"><button id="next-button">&#8250;</button></div>
+            </div>
+        </section>
    </main>
 </body>
 </html>

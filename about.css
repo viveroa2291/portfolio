@@ -1,0 +1,22 @@
+.aboutHeader {
+    text-align: center;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.aboutNav {
+  text-align: center;
+}
+.aboutNav>a {
+    text-decoration: none;
+    margin: 25px;
+}
+@media (max-width: 1000px){
+      .content {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+   }
+}

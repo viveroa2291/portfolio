@@ -1,0 +1,21 @@
+.galleryNav {
+    text-align: center;
+  }
+  .galleryNav>a {
+      text-decoration: none;
+      margin: 25px;
+  }
+  #next-area, #previous-area {
+    margin: auto;
+}
+#next-button, #previous-button{
+    color: white;
+    background: skyblue;
+    
+}
+#next-button:hover, #previous-button:hover{
+    background: cornflowerblue;
+  }
+  @media (max-width: 1000px){
+    
+}
