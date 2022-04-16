@@ -1,3 +1,7 @@
+
+main {
+   background-color: beige;
+}
 .logo {
     display: block;
     margin: auto;
@@ -5,12 +9,23 @@
     width: 150px;
     border: solid black 3px;
 }
+/*
 .navigation>a{
     border: solid black 3px;
     padding: 1rem 2rem; 
 }
+*/
 h1 {
     text-align: center;
+}
+.navLinks{
+    color: black;
+   background-color: cornsilk;
+   border: solid black 3px;
+    padding: 1rem 2rem; 
+}
+.navLinks:hover {
+    background-color: antiquewhite;
 }
 @media (max-width: 1000px){
      .navigation
