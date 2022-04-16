@@ -7,7 +7,10 @@
     <title>Gallery Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery.css">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> <!--Works with all of the fa, fab, and fas classes. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Works for all of the fa classes NOT Discord or the Phone Icon-->
+    <script src="scripts.js"></script>
 </head>
 <body>
    <header>
@@ -17,22 +20,24 @@
         <a href="contact.html" style="text-decoration: none;" class="navLinks">Contact</a>
         <a href="gallery.html" style="text-decoration: none;" class="navLinks">Gallery</a>
     </nav>
+    <hr>
    </header> 
    <main>
         <h1>Gallery / Collection</h1>
-        <hr width="50%">
+        <hr class="header-space">
         <nav class="galleryNav">
             <a href="#personal" onclick="javascript:personal();">Personal</a>
             <a href="#travel" onclick="javascript:travel();">Travel</a>
             <a href="#artsy" onclick="javascript:artsy();">Artsy</a>
         </nav>
+        <hr class="underLinks">
         <section>
-            <h2 style="text-align: center;" id="header"></h2>
+            <h2 id="header">Hello</h2>
             <div class="gallery-content">
                 <div id="previous-area">
                     <button id="previous-button">&#8249;</button> 
                 </div>
-                <img class="gallery-images" id="images" src="" alt="Any Picture">
+                <img class="gallery-images" id="images" src="images/aboutMe.jpeg" alt="Any Picture"> <!--Will show up an error because it's empty, but it's in the javascript-->
                 <div id="next-area">
                     <button id="next-button">&#8250;</button>
                 </div>
@@ -40,108 +45,19 @@
             <p id="descriptionBody" style="text-align: center;"></p>
         </section>
    </main>
+   <hr>
+   <div class="footer">
+    <a href="https://www.facebook.com/adan.vivero97/" class="fa fa-facebook"></a> 
+    <a href="https://www.instagram.com/adxadan/" class="fa fa-instagram"></a> 
+    <a href="https://www.snapchat.com/" class="fa fa-snapchat-ghost"></a>
+    <i class="fa fa-github"></i> 
+    <i class="fa fa-gitlab"></i> 
+    <a href="https://www.youtube.com/channel/UC44ZQ3MDGUBNPA0ZFsY8Lfg" class="fa fa-youtube"></a> 
+    <a href="https://www.linkedin.com/in/adan-vivero-a93970156/" class="fa fa-linkedin"></a>
+    <i class="fa fa-stack-overflow"></i>
+    <i class='fab fa-discord'></i>
+    <a href="#" class="fa fa-google"></a> 
+    <i class='fas fa-phone' style='font-size:24px; color: gray;'></i> 
+</div>
 </body>
 </html>
-<script>
-     const previousButton = document.getElementById('previous-button'); // The back button
-    const nextButton = document.getElementById('next-button'); // The next button
-    const headerDiv = document.getElementById('header'); // header title
-    const images = document.getElementById('images');
-    const descriptionDiv = document.getElementById('descriptionBody');
-
-    const headerTitles = ["Universal", "Acapulco, Mexico", "The Alamo", "The Arches", "Maggie Daley Park", "Milwaukee Bucs Game"];
-    const headerDescritpions = ["This is an image of me at Universal in Orlando Florida", "This is a picture of me in Acapulco Mexico.", "This is a selfie of me at the Alamo in San Antonio Texas.", "This is an image of me in the Arches National Park in Utah.", "This is an image of me ice skating with friends in Maggie Daley Park in Chicago.", "This is a picture of me at a Milwaukee Bucs game in Milwaukee."];
-    const imageSource = ["images/universal.jpeg", "images/acapulcoMe.jpeg", "images/alamo.jpeg", "images/arches.jpeg", "images/maggieDaley.jpeg", "images/bucs.jpeg"];
-    let s = 0;
-
-    function advance(delta) {
-        s = (s + delta + headerTitles.length) % headerTitles.length;
-        descriptionDiv.innerHTML = headerDescritpions[s];
-        headerDiv.innerHTML = headerTitles[s];
-    // headerDiv.setAttribute("href", linkTitles[s]);
-        images.src = imageSource[s];
-    }
-    previousButton.addEventListener('click', () => advance(-1));
-    nextButton.addEventListener('click', () => advance(1));
-
-    advance(0); 
-    function artsy() {
-        const previousButton = document.getElementById('previous-button'); // The back button
-    const nextButton = document.getElementById('next-button'); // The next button
-    const headerDiv = document.getElementById('header'); // header title
-    const images = document.getElementById('images');
-    const descriptionDiv = document.getElementById('descriptionBody');
-
-    const headerTitles = ["Door County", "Acapulco", "United States Capitol", "Cedar Point", "Chicago", "South Dakota"];
-    const headerDescritpions = ["This is an image of Anderson's Dock in Door County Wisconsin", "This is an image of Acapulco, Mexico driving into.", "This is an image of the United States Capitol in Washington, DC.", "This is an image of the entrance of Cedar Point in Sandusky, Ohio.", "This is an image of Chicago taken from the highway.", "This is an image of buffalos taken in South Dakota."];
-    const imageSource = ["images/doorCounty.jpeg", "images/acapulco.jpeg", "images/capital.jpeg", "images/cedarPoint.jpeg", "images/chicago.jpeg", "images/southDakota.jpeg"];
-    const linkTitles = ["home.html", "about.html", "contact.html", "story.html", "projects.html"];
-    let s = 0;
-
-    function advance(delta) {
-        s = (s + delta + headerTitles.length) % headerTitles.length;
-        descriptionDiv.innerHTML = headerDescritpions[s];
-        headerDiv.innerHTML = headerTitles[s];
-    // headerDiv.setAttribute("href", linkTitles[s]);
-        images.src = imageSource[s];
-    }
-    previousButton.addEventListener('click', () => advance(-1));
-    nextButton.addEventListener('click', () => advance(1));
-
-    advance(0);
-    }
-    function personal(){
-    const previousButton = document.getElementById('previous-button'); // The back button
-    const nextButton = document.getElementById('next-button'); // The next button
-    const headerDiv = document.getElementById('header'); // header title
-    const images = document.getElementById('images');
-    const descriptionDiv = document.getElementById('descriptionBody');
-
-    const headerTitles = ["Universal", "Acapulco, Mexico", "The Alamo", "The Arches", "Maggie Daley Park", "Milwaukee Bucs Game"];
-    const headerDescritpions = ["This is an image of me at Universal in Orlando Florida", "This is a picture of me in Acapulco Mexico.", "This is a selfie of me at the Alamo in San Antonio Texas.", "This is an image of me in the Arches National Park in Utah.", "This is an image of me ice skating with friends in Maggie Daley Park in Chicago.", "This is a picture of me at a Milwaukee Bucs game in Milwaukee."];
-    const imageSource = ["images/universal.jpeg", "images/acapulcoMe.jpeg", "images/alamo.jpeg", "images/arches.jpeg", "images/maggieDaley.jpeg", "images/bucs.jpeg"];
-    let s = 0;
-
-    function advance(delta) {
-        s = (s + delta + headerTitles.length) % headerTitles.length;
-        descriptionDiv.innerHTML = headerDescritpions[s];
-        headerDiv.innerHTML = headerTitles[s];
-    // headerDiv.setAttribute("href", linkTitles[s]);
-        images.src = imageSource[s];
-    }
-    previousButton.addEventListener('click', () => advance(-1));
-    nextButton.addEventListener('click', () => advance(1));
-
-    advance(0); 
-    }
-    function travel() {
-    const previousButton = document.getElementById('previous-button'); // The back button
-    const nextButton = document.getElementById('next-button'); // The next button
-    const headerDiv = document.getElementById('header'); // header title
-    const images = document.getElementById('images');
-    const descriptionDiv = document.getElementById('descriptionBody');
-
-    const headerTitles = ["Huntington Beach, California", "Forte De San Diego", "Harpers Ferry National Park", "United States Capitol", "Cleveland, Ohio", "Mount Rushmore, South Dakota"];
-    const headerDescritpions = ["This is a picture of me in Huntington Beach, California.",
-     "This is a picture of me doing a handstand at the Forte of San Diego.", 
-     "This is a picture of me in Harper's Ferry National Park.", 
-     "This is a picture of me riding around the United States Capitol.",
-      "This is a picture of me in Cleveland Ohio.", 
-      "This is a picture of me in Mount Rushmore in South Dakota."];
-    const imageSource = ["images/california.jpeg", "images/forte.jpeg", "images/harpersFerry.jpeg", "images/capitolMe.jpeg", "images/cleveland.jpeg", "images/mountRushmore.jpeg"];
-    let s = 0;
-
-    function advance(delta) {
-        s = (s + delta + headerTitles.length) % headerTitles.length;
-        descriptionDiv.innerHTML = headerDescritpions[s];
-        headerDiv.innerHTML = headerTitles[s];
-    // headerDiv.setAttribute("href", linkTitles[s]);
-        images.src = imageSource[s];
-    }
-    previousButton.addEventListener('click', () => advance(-1));
-    nextButton.addEventListener('click', () => advance(1));
-
-    advance(0);  
-    }
-
-</script>

@@ -1,6 +1,6 @@
-
+/* Disclaimer, I will have 11 errors, but my javascript won't work without Id's. */
 main {
-   background-color: beige;
+   background-color: beige; 
 }
 .logo {
     display: block;
@@ -9,12 +9,6 @@ main {
     width: 150px;
     border: solid black 3px;
 }
-/*
-.navigation>a{
-    border: solid black 3px;
-    padding: 1rem 2rem; 
-}
-*/
 h1 {
     text-align: center;
 }
@@ -27,6 +21,71 @@ h1 {
 .navLinks:hover {
     background-color: antiquewhite;
 }
+.footer {
+    text-align: center;
+    justify-content: space-between;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+.fa-instagram {
+    background: #AA5544;
+    color: white;
+  }
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-stack-overflow {
+    background: orange;
+    color:white;
+  }
+  .fa-discord{
+    /*
+    padding: 15px;
+    font-size: 30px;
+    width: 45px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    */
+    background: blue;
+    color: white;
+  }
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  } 
+  .fab {
+    padding: 10px;
+    font-size: 25px;
+    width: 45px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  .fa {
+    padding: 9px 0;
+    font-size: 25px; 
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
 @media (max-width: 1000px){
      .navigation
      {

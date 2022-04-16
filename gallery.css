@@ -8,7 +8,7 @@
       text-decoration: none;
       margin: 25px;
   }
-  #next-area, #previous-area {
+#next-area, #previous-area {
     margin: auto;
 }
 #next-button, #previous-button{
@@ -17,7 +17,7 @@
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .gallery-content{
     display: flex;
@@ -26,9 +26,31 @@
 .gallery-images {
     height: 500px;
 }
+.underLinks {
+    width: 25%;
+}
 #next-button:hover, #previous-button:hover{
     background: cornflowerblue;
   }
+  #header {
+      text-align: center;
+  }
   @media (max-width: 1000px){
-    
+      .underLinks{
+          width: 50%;
+      }
+      .gallery-images {
+          height: 350px;
+      }
+      #next-button, #previous-button{
+        color: white;
+        background: skyblue;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        font-size: 1rem;
+    }
+    #next-area, #previous-area {
+        margin: auto;
+    } 
 }

@@ -44,6 +44,12 @@ h3{
    .headerSpace {
     width: 50%;
 }
+.headerSpace {
+    width: 50%;
+}
+.header-space {
+    width: 25%;
+}
 }
 @media (max-width: 750px){ 
     .headerSpace {
